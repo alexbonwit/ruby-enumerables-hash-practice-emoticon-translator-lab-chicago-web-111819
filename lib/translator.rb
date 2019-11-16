@@ -22,7 +22,11 @@ end
 def get_japanese_emoticon(file, engemoticon)
   emolibrary = load_library(file)
 
-  
+  emolibrary.each do |toget, translations|
+    translations.each do |key, value|
+      
+    end
+  end
   
   # calls on load_library(file)
   # returns Japanese equivalent of English emoticon
