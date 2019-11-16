@@ -34,7 +34,7 @@ def get_japanese_emoticon(file, engemoticon)
   # returns Japanese equivalent of English emoticon
   # returns an apology message if argument is not a known emoticon 
   # binding.pry
-  return "Sorry, that emoticon could not be found."
+  return "Sorry, that emoticon was not found."
 end
 
 def get_english_meaning(file, jpnemoticon)
