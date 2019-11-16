@@ -24,7 +24,9 @@ def get_japanese_emoticon(file, engemoticon)
 
   emolibrary.each do |toget, translations|
     translations.each do |key, value|
-      
+      if key == engemoticon
+        return value
+      end
     end
   end
   
@@ -32,6 +34,7 @@ def get_japanese_emoticon(file, engemoticon)
   # returns Japanese equivalent of English emoticon
   # returns an apology message if argument is not a known emoticon 
   binding.pry
+  return "Sorry, that emoticon could not be found."
 end
 
 def get_english_meaning(file, jpnemoticon)
