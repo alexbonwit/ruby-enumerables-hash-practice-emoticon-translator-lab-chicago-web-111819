@@ -11,12 +11,12 @@ def load_library(file)
     :get_emoticon => {}
   }
   
-  emo_meanings.each do |meanings, emoarray|
-    meanings.each do |emoticons|
-      emoticons_hash[:get_meaning][emoticons[1].to_sym] = meanings
-      emoticons_hash[:get_emoticon][emoticons[0].to_sym] = emoticons[1]
-    end
-  end
+  # emo_meanings.each do |meanings, emoarray|
+  #   meanings.each do |emoticons|
+  #     emoticons_hash[:get_meaning][emoticons[1].to_sym] = meanings
+  #     emoticons_hash[:get_emoticon][emoticons[0].to_sym] = emoticons[1]
+  #   end
+  # end
  
  
   # returns two keys, 'get_meaning' and 'get_emoticon'
