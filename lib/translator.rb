@@ -1,13 +1,40 @@
 # require modules here
+require 'yaml'
+require 'pry'
 
-def load_library
-  # code goes here
+def load_library(file)
+  
+  emo_meanings = YAML.load_file(file)
+  
+  emoticons_hash = {
+    :get_meaning => {},
+    :get_emoticon => {}
+  }
+  
+  emo_meanings.each do |meanings, emoarray|
+    meanings.each do |emoticons|
+      emoticons_hash[:get_meaning][emoticons[1].to_sym] = meanings
+      emoticons_hash[:get_emoticon][emoticons[0].to_sym] = emoticons[1]
+    end
+  end
+ 
+ 
+  # returns two keys, 'get_meaning' and 'get_emoticon'
+  # each of the above keys point to inner hashes
+  # 'get_meaning' value = Japanese emoticons, which points to their meanings
+  # 'get_emoticon' value = English emoticons, which points to Japanese equivalent
+  
+  emoticons_hash
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(file, emoticon)
+  # calls on load_library(file)
+  # returns Japanese equivalent of English emoticon
+  # returns an apology message if argument is not a known emoticon 
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(file, emoticon)
+  # calls on load_library(file)
+  # returns english meaning of Japanese emoticon
+  # returns an apology message if argument is not a known emoticon
 end
