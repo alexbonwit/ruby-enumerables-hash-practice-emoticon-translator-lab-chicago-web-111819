@@ -12,7 +12,7 @@ def load_library(file)
   }
   
   # emo_meanings.each do |meanings, emoarray|
-  #   meanings.each do |emoticons|
+  #   emoarray.each do |emoticons|
   #     emoticons_hash[:get_meaning][emoarray[1].to_sym] = meanings
   #     emoticons_hash[:get_emoticon][emoarray[0].to_sym] = emoarray[1]
   #   end
