@@ -15,17 +15,17 @@ def load_library(file)
       emoticons_hash[:get_meaning][emoarray[1]] = meanings
       emoticons_hash[:get_emoticon][emoarray[0]] = emoarray[1]
   end
- 
- 
-  # returns two keys, 'get_meaning' and 'get_emoticon'
-  # each of the above keys point to inner hashes
-  # 'get_meaning' value = Japanese emoticons, which points to their meanings
-  # 'get_emoticon' value = English emoticons, which points to Japanese equivalent
   
   emoticons_hash
 end
 
 def get_japanese_emoticon(file, emoticon)
+  emolibrary = load_library(file)
+  
+  if emolibrary.includes? emoticon
+    
+  end
+  
   # calls on load_library(file)
   # returns Japanese equivalent of English emoticon
   # returns an apology message if argument is not a known emoticon 
