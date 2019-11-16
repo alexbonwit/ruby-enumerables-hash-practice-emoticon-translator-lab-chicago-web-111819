@@ -15,7 +15,6 @@ def load_library(file)
     meanings.each do |emoticons|
       emoticons_hash[:get_meaning][emoarray[1].to_sym] = meanings
       emoticons_hash[:get_emoticon][emoarray[0].to_sym] = emoarray[1]
-      binding.pry
     end
   end
  
@@ -26,6 +25,7 @@ def load_library(file)
   # 'get_emoticon' value = English emoticons, which points to Japanese equivalent
   
   emoticons_hash
+  binding.pry
 end
 
 def get_japanese_emoticon(file, emoticon)
