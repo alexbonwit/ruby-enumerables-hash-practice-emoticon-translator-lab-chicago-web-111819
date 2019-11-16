@@ -21,14 +21,13 @@ end
 
 def get_japanese_emoticon(file, engemoticon)
   emolibrary = load_library(file)
+
   
-  if emolibrary.includes? engemoticon
-    
-  end
   
   # calls on load_library(file)
   # returns Japanese equivalent of English emoticon
   # returns an apology message if argument is not a known emoticon 
+  binding.pry
 end
 
 def get_english_meaning(file, jpnemoticon)
